@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>식당 목록</title>
+  </head>
+  <body class="main" cz-shortcut-listen="true">
+    <div id="wrap" class>
+      <div id="header">
+        <div class="util">
+          <div class="util_in">
+            <ul class="util_link">
+              <li>
+                <a href="https://hj357.github.io/webProgramming/sign-in"
+                  >로그인</a
+                >
+              </li>
+              <li>
+                <a href="https://hj357.github.io/webProgramming/sign-up"
+                  >회원가입</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="gnb" id="gnb">
+          <h1 style="margin-left: 20px; font-size: 50px">
+            <a href="https://hj357.github.io/webProgramming/">
+              동네 별별 맛집
+            </a>
+          </h1>
+          <ul class="depth1" style="margin-right: -550px !important">
+            <li class="t m3">
+              <a href="https://hj357.github.io/webProgramming/intro" class="tl"
+                >소개
+              </a>
+            </li>
+            <li class="t m4">
+              <a href="https://hj357.github.io/webProgramming/board" class="tl"
+                >리뷰 게시판</a
+              >
+            </li>
+            <li class="t m5">
+              <a href="https://hj357.github.io/webProgramming/search" class="tl"
+                >리뷰된 식당 목록</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="gnb" id="gnb">
+          <div class="dropdown" style="margin: 10px">
+            <button
+              class="dropbtn"
+              type="button"
+              data-toggle="dropdown"
+              aria-expanded="false"
+            >
+              지역선택<span class="caret"></span>
+            </button>
+            <ul class="dropdown-content">
+              <il>
+                <ul class="col-xs-6">
+                  <li class="control" data-filter=".jn">
+                    <a href="#">1. 종로구</a>
+                  </li>
+                  <li class="control" data-filter=".jg">
+                    <a href="#">2. 중구</a>
+                  </li>
+                  <li class="control" data-filter=".ys">
+                    <a href="#">3. 용산구</a>
+                  </li>
+                  <li class="control" data-filter=".sd">
+                    <a href="#">4. 성동구</a>
+                  </li>
+                  <li class="control" data-filter=".gj">
+                    <a href="#">5. 광진구</a>
+                  </li>
+                  <li class="control" data-filter=".dd">
+                    <a href="#">6. 동대문구</a>
+                  </li>
+                  <li class="control" data-filter=".jr">
+                    <a href="#">7. 중랑구</a>
+                  </li>
+                  <li class="control" data-filter=".sb">
+                    <a href="#">8. 성북구</a>
+                  </li>
+                  <li class="control" data-filter=".gb">
+                    <a href="#">9. 강북구</a>
+                  </li>
+                  <li class="control" data-filter=".db">
+                    <a href="#">10. 도봉구</a>
+                  </li>
+                  <li class="control" data-filter=".nw">
+                    <a href="#">11. 노원구</a>
+                  </li>
+                  <li class="control" data-filter=".ep">
+                    <a href="#">12. 은평구</a>
+                  </li>
+                  <li class="control" data-filter=".sm">
+                    <a href="#">13. 서대문구</a>
+                  </li>
+                </ul>
+                <ul class="col-xs-6">
+                  <li class="control" data-filter=".mp">
+                    <a href="#">14. 마포구</a>
+                  </li>
+                  <li class="control" data-filter=".yc">
+                    <a href="#">15. 양천구</a>
+                  </li>
+                  <li class="control" data-filter=".gs">
+                    <a href="#">16. 강서구</a>
+                  </li>
+                  <li class="control" data-filter=".gr">
+                    <a href="#">17. 구로구</a>
+                  </li>
+                  <li class="control" data-filter=".gc">
+                    <a href="#">18. 금천구</a>
+                  </li>
+                  <li class="control" data-filter=".yd">
+                    <a href="#">19. 영등포구</a>
+                  </li>
+                  <li class="control" data-filter=".dj">
+                    <a href="#">20. 동작구</a>
+                  </li>
+                  <li class="control" data-filter=".ga">
+                    <a href="#">21. 관악구</a>
+                  </li>
+                  <li class="control" data-filter=".sc">
+                    <a href="#">22. 서초구</a>
+                  </li>
+                  <li class="control" data-filter=".gn">
+                    <a href="#">23. 강남구</a>
+                  </li>
+                  <li class="control" data-filter=".sp">
+                    <a href="#">24. 송파구</a>
+                  </li>
+                  <li class="control" data-filter=".gd">
+                    <a href="#">25. 강동구</a>
+                  </li>
+                </ul>
+              </il>
+            </ul>
+          </div>
+        </div>
+        <style>
+          .dropbtn {
+            background-color: #04aa6d;
+            color: white;
+            padding: 14px;
+            font-size: 16px;
+            border: none;
+          }
+
+          .dropdown {
+            position: relative;
+            display: inline-block;
+          }
+
+          .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f1f1f1;
+            min-width: 290px;
+            height: 490px;
+            box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            z-index: 1;
+          }
+
+          .dropdown-content a {
+            color: black;
+            padding: 10px 10px;
+            text-decoration: none;
+            display: block;
+          }
+
+          .dropdown-content a:hover {
+            background-color: #ddd;
+          }
+
+          .dropdown:hover .dropdown-content {
+            display: block;
+          }
+
+          .dropdown:hover .dropbtn {
+            background-color: #3e8e41;
+          }
+        </style>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+        <link
+          rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        />
+        <script>
+          $(".dropdown-content a").click(function () {
+            $(".selected").text($(this).text());
+          });
+        </script>
+        <style>
+          .control {
+            height: 25px;
+            margin-top: 10px;
+          }
+        </style>
+      </div>
+    </div>
+    </div>
+  </body>
+</html>

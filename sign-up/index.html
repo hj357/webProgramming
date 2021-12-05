@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta id="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="style.css" rel="stylesheet" />
+    <title>회원가입</title>
+  </head>
+  <body>
+    <div class="main">
+      <form name="signUp" id="signUp" method="post" onsubmit="signUpcheck();">
+        <table>
+          <tr>
+            <td
+              colspan="2"
+              style="text-align: center; font-size: 20px"
+              height="70px"
+            >
+              회원가입 폼
+            </td>
+          </tr>
+          <tr>
+            <td>ID</td>
+            <td>
+              <input
+                type="text"
+                id="id"
+                minlength="4"
+                maxlength="12"
+                placeholder="4~12글자까지 입력 가능합니다"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>비밀번호</td>
+            <td>
+              <input
+                type="password"
+                id="pw"
+                minlength="4"
+                maxlength="12"
+                placeholder="영문과 숫자로만 4~12 입력"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>비밀번호 확인</td>
+            <td>
+              <input
+                type="password"
+                id="pw2"
+                minlength="4"
+                maxlength="12"
+                placeholder="비밀번호를 재입력해주세요"
+              />
+            </td>
+          </tr>
+          <tr>
+            <td>닉네임</td>
+            <td>
+              <input
+                type="text"
+                id="nic  id"
+                minlength="2"
+                maxlength="12"
+                placeholder="2~12글자까지 입력 가능합니다"
+              />
+            </td>
+          </tr>
+
+          <tr>
+            <td>지역구</td>
+            <td>
+              <select id="distirct" id="distirct">
+                <option value="1">종로구</option>
+                <option value="2">중구</option>
+                <option value="3">용산구</option>
+                <option value="4">성동구</option>
+                <option value="5">광진구</option>
+                <option value="6">동대문구</option>
+                <option value="7">중랑구</option>
+                <option value="8">성북구</option>
+                <option value="9">강북구</option>
+                <option value="10">도봉구</option>
+                <option value="11">노원구</option>
+                <option value="12">은평구</option>
+                <option value="13">서대문구</option>
+                <option value="14">마포구</option>
+                <option value="15">양천구</option>
+                <option value="16">강서구</option>
+                <option value="17">구로구</option>
+                <option value="18">금천구</option>
+                <option value="19">영등포구</option>
+                <option value="20">동작구</option>
+                <option value="21">관악구</option>
+                <option value="22">서초구</option>
+                <option value="23">강남구</option>
+                <option value="24">송파구</option>
+                <option value="25">강동구</option>
+              </select>
+            </td>
+          </tr>
+
+          <tr>
+            <td colspan="2" align="center" height="70px">
+              <input type="submit" value="제출" onclick="signUpcheck()" />
+              <input type="reset" value="초기화" />
+            </td>
+          </tr>
+        </table>
+      </form>
+    </div>
+  </body>
+  <script>
+    function signUpcheck() {
+      let id = document.signUp.id.value;
+      let pw = document.signUp.pw.value;
+      let pw2 = document.signUp.pw2.value;
+      let nickName = document.signUp.nickname.value;
+      let cardNum = document.signUp.cardNum.value;
+      let district = document.signUp.district.value;
+      alert("district");
+
+      const regExp1 = /^[a-zA-Z0-9]{4,12}$/;
+      //id와 비밀번호의 유효성 검사
+      const regname = /^[가-힝]{2,}$/;
+      //이름의 유효성 검사
+
+      if ((id2 = "")) {
+        alert("아이디를 입력하세요");
+        document.signUp.id.focus();
+        return false;
+      }
+      if (regExp1.test(id) == false) {
+        alert("영문과 숫자를 입력해주세요");
+        document.signUp.id.focus();
+        return false;
+      }
+    }
+  </script>
+</html>
